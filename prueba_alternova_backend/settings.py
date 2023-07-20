@@ -126,3 +126,5 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'cuentas.Usuarios'
+
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
