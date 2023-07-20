@@ -2,7 +2,7 @@
   "builds": [
     {
       "src": "prueba_alternova_backend/wsgi.py",
-      "use": "@vergel/python"
+      "use": "@vercel/python"
     }
   ],
   "routes": [
