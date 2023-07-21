@@ -43,7 +43,7 @@ class PeliculasOrdenadasList(PeliculasList):
         queryset = Peliculas.objects.all()
         order_by = self.request.query_params.get('order_by', None)
         if order_by is not None:
-            queryset = queryset.order_by(order_by)
+            queryset = queryset.order_by(order_by.lower())
             return queryset
 
 
