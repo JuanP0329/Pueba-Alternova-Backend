@@ -1,7 +1,8 @@
 from random import randint
 
 from rest_framework import generics
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
 from cuentas.models import Acciones, Usuarios, Vista
@@ -10,8 +11,10 @@ from .serializers import PeliculasSerializers
 
 
 # Create your views here.
+
 class PeliculasList(generics.ListAPIView):
     serializer_class = PeliculasSerializers
+    permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
         queryset = Peliculas.objects.all()
@@ -45,6 +48,7 @@ class PeliculasOrdenadasList(PeliculasList):
 
 
 @api_view(['GET'])
+@permission_classes([IsAuthenticated])
 def acciones(request, pk):
     pelicula = Peliculas.objects.filter(pk=pk).first()
     if pelicula:
@@ -68,6 +72,7 @@ def acciones(request, pk):
 
 
 @api_view(['GET'])
+@permission_classes([IsAuthenticated])
 def accion_vista(request, pk):
     pelicula = Peliculas.objects.filter(pk=pk).first()
     if pelicula:

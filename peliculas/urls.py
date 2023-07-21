@@ -1,4 +1,5 @@
 from django.urls import path
+
 from .views import *
 
 app_name = 'api'
@@ -11,4 +12,3 @@ urlpatterns = [
     path('v1/peliculas/<str:pk>/ver', accion_vista)
 
 ]
-

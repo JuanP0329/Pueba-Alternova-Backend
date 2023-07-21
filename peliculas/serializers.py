@@ -1,6 +1,7 @@
 from rest_framework import serializers
-from .models import Peliculas, Genero
+
 from cuentas.models import Acciones
+from .models import Peliculas, Genero
 
 
 class PeliculasSerializers(serializers.ModelSerializer):
