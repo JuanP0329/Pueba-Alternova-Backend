@@ -90,10 +90,10 @@ python manage.py runserver
 ![runserver](./recursos_readme/runserver.png)
  
 
-- al ejecutarse si no existe algún error, nos estrega una url donde se encuentra corriendo nuestro proyecto en el servidor "http://127.0.0.1:8000/"
+- Al ejecutarse si no existe algún error, nos estrega una url donde se encuentra corriendo nuestro proyecto en el servidor "http://127.0.0.1:8000/"
 
 
-- si a la ruta anterior le agregamos el admin después del ultimo slash --> "http://127.0.0.1:8000/admin", se vería nuestro administrador de la siguiente manera:
+- Si a la ruta anterior le agregamos el admin después del ultimo slash --> "http://127.0.0.1:8000/admin", se vería nuestro administrador de la siguiente manera:
 
 
 - ![Admin](./recursos_readme/admin.png)

@@ -20,6 +20,6 @@ from peliculas.urls import urlpatterns
 
 urlpatterns = [
     path('v1/auth/', include('cuentas.urls')),
-    path('admin/', admin.site.urls),
+    path('', admin.site.urls),
 
 ] + urlpatterns
