@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "src": "prueba_alternova_backend/wsgi.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "prueba_alternova_backend/wsgi.py"
+    }
+  ]
+}
