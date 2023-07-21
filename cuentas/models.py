@@ -1,10 +1,9 @@
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.db import models
 from django.utils import timezone
-from .managers import UsuariosManager
-from peliculas.models import Peliculas
 
 from peliculas.models import Peliculas
+from .managers import UsuariosManager
 
 
 # Create your models here.
@@ -37,7 +36,7 @@ class Acciones(models.Model):
         return f'{self.usuario.email} - {self.pelicula.nombre}'
 
     def save(
-        self, force_insert=False, force_update=False, using=None, update_fields=None
+            self, force_insert=False, force_update=False, using=None, update_fields=None
     ):
         super().save(force_insert, force_update, using, update_fields)
         pelicula = Peliculas.objects.get(pk=self.pelicula.pk)
@@ -57,7 +56,7 @@ class Vista(models.Model):
         return f'{self.usuario.email} - {self.pelicula.nombre}'
 
     def save(
-        self, force_insert=False, force_update=False, using=None, update_fields=None
+            self, force_insert=False, force_update=False, using=None, update_fields=None
     ):
         super().save(force_insert, force_update, using, update_fields)
         pelicula = Peliculas.objects.get(pk=self.pelicula.pk)
